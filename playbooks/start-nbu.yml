@@ -1,0 +1,9 @@
+---
+- name: Iniciar servicios NBU
+  hosts: azcanbm-prod01
+  tasks:
+    - name: Pause for 1 minutes to start service again
+      ansible.builtin.pause:
+        minutes: 1
+    - name: Iniciar el servicio de Netbackup
+      shell: "/usr/openv/netbackup/bin/bp.start_all"
