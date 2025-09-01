@@ -1,0 +1,4 @@
+SERVER = toranbm-prod01
+SERVER = azcanbm-prod01
+CLIENT_NAME = uxs150
+CONNECT_OPTIONS = localhost 1 0 2
