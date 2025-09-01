@@ -1,0 +1,13 @@
+---
+- name: Check journal
+  hosts: azcanbm-prod01
+  sources:
+    - name: Journal
+      ansible.eda.journald:
+        match: "ALL"
+  rules:
+    - name: "Print Journald Event message"
+      condition: event.msg == "Shutting down nbvault daemon"
+      action:
+        print_event:
+          pretty: true
