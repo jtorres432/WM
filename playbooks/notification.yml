@@ -1,0 +1,7 @@
+---
+- name: Envia notificacion
+  hosts: localhost
+  tasks:
+    - name: Echo
+      debug:
+        msg: "NBU arriba!!"
