@@ -11,19 +11,15 @@
     - name: netbackup-service-down
       condition: event.url_check.status == "down"
       actions:
-      action:
       - run_job_template:
           name: start-nbu
           organization: Default
-          set_facts: true
       - run_job_template:
           name: copy-template-toreo
           organization: Default
-          set_facts: true
     - name: netbackup-service-up
       condition: event.url_check.status == "up"
       actions:
       - run_job_template:
           name: copy-template-azcapo
           organization: Default
-          set_facts: true
