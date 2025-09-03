@@ -1,6 +1,6 @@
 ---
 - name: Iniciar servicios NBU
-  hosts: azcanbm-prod01
+  hosts: all
   tasks:
     - name: Pause for 1 minutes to start service again
       ansible.builtin.pause:
