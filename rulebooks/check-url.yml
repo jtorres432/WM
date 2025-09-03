@@ -13,13 +13,10 @@
       actions:
       - run_job_template:
           name: start-nbu
-          organization: Default
       - run_job_template:
           name: copy-template-toreo
-          organization: Default
     - name: netbackup-service-up
       condition: event.url_check.status == "up"
       actions:
       - run_job_template:
           name: copy-template-azcapo
-          organization: Default
