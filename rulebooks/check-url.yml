@@ -1,6 +1,6 @@
 ---
 - name: Check webserver
-  hosts: all
+  hosts: netbackup
   sources:
     - ansible.eda.url_check:
         urls:
