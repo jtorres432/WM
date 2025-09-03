@@ -9,7 +9,7 @@
         verify_ssl: false
   rules:
     - name: netbackup-service-down
-      condition: event.url == "https://azcanbm-prod01/webui/" and event.url_check.status == "down"
+      condition: event.url_check.status == "down"
       actions:
       - run_playbook:
           name: start-netbackup.yml
@@ -17,7 +17,7 @@
       - run_playbook:
           name: copy-template-toreo.yml
     - name: netbackup-service-up
-      condition: event.url == "https://azcanbm-prod01/webui/" and event.url_check.status == "up"
+      condition: event.url_check.status == "up"
       actions:
       - run_playbook:
           name: copy-template-azcapo.yml
