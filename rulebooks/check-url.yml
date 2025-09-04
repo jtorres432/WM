@@ -12,10 +12,10 @@
       condition: event.url_check.status == "down"
       actions:
       - run_job_template:
-          name: start-nbu
+          name: copy-template-toreo
           organization: Default
       - run_job_template:
-          name: copy-template-toreo
+          name: start-nbu
           organization: Default
     - name: netbackup-service-up
       condition: event.url_check.status == "up"
