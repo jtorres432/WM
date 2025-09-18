@@ -6,7 +6,7 @@
   tasks:
   - name: Copia plantilla de configuracion azcapo a /usr/openv/netbackup/bp.conf
     ansible.builtin.copy:
-      src: /home/appadmin/app/controller/data/projects/eda/bp.conf-azcapo.j2
+      src: https://github.com/jtorres432/WM/blob/main/templates/bp.conf-azcapo.j2
       dest: /usr/openv/netbackup/bp.conf
       owner: root
       group: root
