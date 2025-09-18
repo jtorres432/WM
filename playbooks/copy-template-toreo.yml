@@ -1,6 +1,7 @@
 ---
 - name: Copiar plantilla de configuracion master toreo
   hosts: all
+  become: yes
   tasks:
   - name: Copia la plantilla de configuracion toreo a /usr/openv/netbackup/bp.conf
     ansible.builtin.template:
