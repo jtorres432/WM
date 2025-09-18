@@ -1,6 +1,7 @@
 ---
 - name: Copiar configuracion de master azcapo
   hosts: all
+  become: yes
   tasks:
   - name: Copia plantilla de configuracion azcapo a /usr/openv/netbackup/bp.conf
     ansible.builtin.template:
